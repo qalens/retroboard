@@ -11,5 +11,6 @@ func SetupRoutes(router *gin.Engine) {
 		authCtrl := controllers.AuthController{}
 		auth.POST("/signup", authCtrl.SignUp)
 		auth.POST("/login", authCtrl.Login)
+		auth.GET("/logout", authCtrl.Logout)
 	}
 }
