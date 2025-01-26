@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 41 30% 96%;
+    /* Example HSL for #fffbf6 */
+    --foreground: 0 0% 0%;
+    /* Black (#000) */
+    --card: 41 30% 96%;
+    /* Match background */
+    --card-foreground: 0 0% 0%;
+    /* Match foreground */
+    --popover: 41 30% 96%;
+    /* Match background */
+    --popover-foreground: 0 0% 0%;
+    /* Match foreground */
+    --primary: 25 68% 56%;
+    /* HSL for #db924b */
+    --primary-foreground: 0 0% 0%;
+    /* Black */
+    --secondary: 184 12% 53%;
+    /* HSL for #5a8486 */
+    --secondary-foreground: 0 0% 0%;
+    /* Black */
+    --muted: 184 12% 53%;
+    /* Match secondary */
+    --muted-foreground: 0 0% 0%;
+    /* Black */
+    --accent: 184 12% 53%;
+    /* Match secondary */
+    --accent-foreground: 0 0% 0%;
+    /* Black */
+    --destructive: 6 82% 69%;
+    /* HSL for #fc9581 */
+    --destructive-foreground: 0 0% 0%;
+    /* Black */
+    --border: 0 0% 7%;
+    /* HSL for a dark divider */
+    --input: 0 0% 7%;
+    /* Match border */
+    --ring: 25 68% 56%;
+    /* Match primary */
+    --chart-1: 12 76% 61%;
+    /* Keep from default */
+    --chart-2: 173 58% 39%;
+    /* Keep from default */
+    --chart-3: 197 37% 24%;
+    /* Keep from default */
+    --chart-4: 43 74% 66%;
+    /* Keep from default */
+    --chart-5: 27 87% 67%;
+    /* Keep from default */
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 5%;
+    /* HSL for #0a080a */
+    --foreground: 0 0% 100%;
+    /* White (#fff) */
+    --card: 0 0% 5%;
+    /* Match background */
+    --card-foreground: 0 0% 100%;
+    /* Match foreground */
+    --popover: 0 0% 5%;
+    /* Match background */
+    --popover-foreground: 0 0% 100%;
+    /* Match foreground */
+    --primary: 25 68% 56%;
+    /* HSL for #db924b */
+    --primary-foreground: 0 0% 5%;
+    /* Dark background contrast */
+    --secondary: 184 12% 53%;
+    /* HSL for #5a8486 */
+    --secondary-foreground: 0 0% 100%;
+    /* White foreground */
+    --muted: 184 12% 53%;
+    /* Match secondary */
+    --muted-foreground: 0 0% 100%;
+    /* Match secondary foreground */
+    --accent: 184 12% 53%;
+    /* Match secondary */
+    --accent-foreground: 0 0% 100%;
+    /* White foreground */
+    --destructive: 6 82% 69%;
+    /* HSL for #fc9581 */
+    --destructive-foreground: 0 0% 5%;
+    /* Dark background contrast */
+    --border: 0 0% 7%;
+    /* A subtle dark divider */
+    --input: 0 0% 7%;
+    /* Match border */
+    --ring: 25 68% 56%;
+    /* Match primary */
+    --chart-1: 220 70% 50%;
+    /* Blue for charts */
+    --chart-2: 160 60% 45%;
+    /* Green for charts */
+    --chart-3: 30 80% 55%;
+    /* Orange for charts */
+    --chart-4: 280 65% 60%;
+    /* Purple for charts */
+    --chart-5: 340 75% 55%;
+    /* Red for charts */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
