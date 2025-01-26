@@ -51,5 +51,5 @@ func (ac AuthController) Login(ctx *gin.Context) {
 }
 func (ac AuthController) Logout(ctx *gin.Context) {
 	ctx.SetCookie("token", "", -1, "/", os.Getenv("DOMAIN"), false, true)
-	ctx.Redirect(http.StatusTemporaryRedirect, "/home")
+	ctx.Redirect(http.StatusTemporaryRedirect, "/private/home")
 }
