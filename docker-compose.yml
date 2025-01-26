@@ -9,7 +9,7 @@ services:
       MONGODB_INITDB_ROOT_PASSWORD: example
       MONGO_INITDB_DATABASE: retroboard
     ports:
-      - 27018:27017
+      - 27017:27017
     volumes:
       - ./data/mongo/001_users.js:/docker-entrypoint-initdb.d/001_users.js:ro
       - ./data/mongo/db:/data/db
@@ -43,6 +43,8 @@ services:
     ports:
       - "8080:8080" # Map appropriate ports
     restart: always
+    depends_on:
+      - db
   
   nginx:
     image: nginx:latest
