@@ -20,7 +20,7 @@ export default function SignUp() {
             <Input placeholder="Confirm Password" type="password" value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} />
         </CardBody>
         <CardFooter className="flex flex-row items-center justify-right gap-2">
-            <Link href="/login"><Button>Login</Button></Link>
+            <Link href="/public/login"><Button>Login</Button></Link>
             <Button className="grow" color="primary" onPress={() => {
                 if (password == confirmPassword) {
                     signup(username, password).then(token => {
@@ -37,7 +37,7 @@ export default function SignUp() {
                         return false
                     }).then((success)=>{
                         if (success)
-                            redirect('/home')
+                            redirect('/private/home')
                     })
                 }
             }}>Sign Up</Button>

@@ -18,7 +18,7 @@ export default function Login() {
             <Input placeholder="Password" type="password" value={password} onChange={e => setPassword(e.target.value)} />
         </CardBody>
         <CardFooter className="flex flex-row items-center justify-right gap-2">
-            <Link href="/signup"><Button>Sign Up</Button></Link>
+            <Link href="/public/signup"><Button>Sign Up</Button></Link>
             <Button className="grow" color="primary" onPress={() => {
                 login(username, password).then(()=>true).catch(e => {
                     toast({
@@ -29,7 +29,7 @@ export default function Login() {
                     return false
                 }).then((success)=>{
                     if (success)
-                        redirect('/home')
+                        redirect('/private/home')
                 })
             }}>Login</Button>
         </CardFooter>

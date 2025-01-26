@@ -4,8 +4,8 @@ export default async function Home() {
   const store = await cookies()
   const session = store.get('token')
   if (!session){
-    redirect("/login")
+    redirect("/public/login")
   } else {
-    redirect("/home")
+    redirect("/private/home")
   }
 }
