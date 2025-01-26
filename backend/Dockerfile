@@ -3,6 +3,8 @@ FROM golang:1.23-alpine
 WORKDIR /go/src/app
 
 COPY . .
+COPY .env.sample /go/src/app/.env
+
 ENV CGO_ENABLED=1
 RUN apk add --no-cache gcc musl-dev
 RUN go mod download
